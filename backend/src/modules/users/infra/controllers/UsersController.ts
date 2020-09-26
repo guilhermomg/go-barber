@@ -15,7 +15,6 @@ export default class UsersController {
         email,
         password
       });
-      //delete user.password;
 
       return response.json({
         user: {
