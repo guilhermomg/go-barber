@@ -4,7 +4,6 @@ import AppError from "@shared/errors/AppError";
 import IUsersRepository from '../repositories/IUsersRepository';
 
 import User from "../infra/typeorm/entities/User";
-import { UserMap } from '../dtos/UserMap';
 
 interface IRequest {
   user_id: string;
