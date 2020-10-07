@@ -20,6 +20,7 @@ container.registerSingleton<IAppointmentsRepository>(
   AppointmentsRepository
 );
 
+console.log('Passou aqui');
 container.registerSingleton<IUsersRepository>(
   'UsersRepository',
   UsersRepository
