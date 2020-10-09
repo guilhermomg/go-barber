@@ -24,7 +24,7 @@ jobs:
       - name: Run build
         run: yarn build
         
-      # Copiar pasta dist para dentro da Digital Ocean
+      # Copiar código para Digital Ocean
       - name: copy dist to Digital Ocean
         uses: appleboy/scp-action@master
         with:
@@ -32,6 +32,9 @@ jobs:
           username: ${{ secrets.SSH_USER }}
           port: ${{ secrets.SSH_PORT }}
           key: ${{ secrets.SSH_KEY }}
-          source: "."
-          target: "~/app/go-barber" 
+          source: "., !node_modules"
+          target: "~/app" 
+          
+      #Executar "yarn" na Digital Ocean
+      
       
