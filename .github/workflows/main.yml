@@ -21,8 +21,8 @@ jobs:
         run: yarn
         
       # Executar a build
-      - name: Run build
-        run: yarn build
+      #- name: Run build
+      #  run: yarn build
         
       # Copiar código para Digital Ocean
       - name: copy dist to Digital Ocean
